@@ -12,17 +12,17 @@ func main() {
 			SetText(text)
 	}
 
-	main := newPrimitive("Main content")
+	main := newPrimitive("Proposed Routes")
 
 	grid := tview.NewGrid().
 		SetRows(2, 0, 1).
-		SetColumns(55, 0).
+		SetColumns(50, 0).
 		SetBorders(true).
 		AddItem(newPrimitive("Header"), 0, 0, 1, 2, 0, 0, false).
 		AddItem(tview.NewTextView().SetTextAlign(tview.AlignLeft).SetText("F1 ===> HELP   F3 ===> BACK   F12 ===> START"), 2, 0, 1, 2, 0, 0, false)
 
 	app := tview.NewApplication()
-	form := tview.NewForm().SetItemPadding(0).
+	form := tview.NewForm().SetItemPadding(1).
 		AddInputField("Starting System", "", 30, nil, nil).
 		AddInputField("Funds Available", "", 20, nil, nil).
 		AddInputField("Time Available", "", 10, nil, nil).
